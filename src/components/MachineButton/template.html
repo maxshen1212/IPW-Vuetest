@@ -1,0 +1,11 @@
+<div class="col col-lg px-1" style="height: 100px;">
+  <button
+    class="btn btn-lg shadow-sm w-100 h-100 m-0"
+    :disabled="disableHandler(buttonId)"
+    @click="test()"
+  >
+    <h5 cid="h1">{{ infoTitle }}:</h5>
+
+    <h6><span>{{ machineAll[buttonId-1]}}</span>({{ unitType }})</h6>
+  </button>
+</div>

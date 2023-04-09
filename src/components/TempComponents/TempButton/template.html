@@ -1,0 +1,12 @@
+<button
+  class="col col-lg text-dark bg-white text-center shadow-sm rounded border border-2 p-0"
+  @click="handleButtonState(buttonId)"
+  style="padding-top: 11px; padding-bottom: 11px"
+  :class="{ orange: buttonId <= 10, blue: buttonId > 10 }"
+>
+  <h6 class="pt-1">溫度{{ tempType }}{{ tempText }}</h6>
+  <p class="fs-5 fw-light">
+    <i class="bi bi-thermometer-half"></i
+    ><span>{{ tempAll[buttonId - 1] }}</span>℃
+  </p>
+</button>
