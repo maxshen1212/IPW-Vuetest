@@ -1,5 +1,6 @@
 <template>
   <HeadComponent />
+  <h1>測試頁面</h1>
   <h2>ref 獲取對象</h2>
   <input type="text" ref="inputRef" />
   <h2>Promise 抽獎</h2>
