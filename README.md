@@ -1,4 +1,4 @@
-# front
+# Front-End
 
 ## Project setup
 ```
@@ -14,11 +14,25 @@ npm run serve
 ```
 npm run build
 ```
-
+<!--
 ### Lints and fixes files
 ```
 npm run lint
+``` -->
+
+# Back-End
+
+## Change Direct First
+```
+cd api
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Project setup
+```
+npm install
+```
+
+### Compiles for development
+```
+npm run start
+```
