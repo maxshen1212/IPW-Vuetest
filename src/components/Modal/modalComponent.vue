@@ -158,7 +158,6 @@
 
 <script>
 import nn_network from "@/components/index5&6/SettingInfoRight/Section_Pagination/nn_network.vue";
-
 import $ from "jquery";
 import { onMounted, ref } from "vue";
 import { Modal } from "bootstrap/dist/js/bootstrap.js";
@@ -231,7 +230,7 @@ export default {
         }
       });
 
-      // 下一步
+      // 感測模式下一步
       $("#check_model_3").on("click", function () {
         let select_sensor = document.getElementById("select_sensor");
         let select_sensor_val = select_sensor.value;
@@ -248,13 +247,13 @@ export default {
           data: { state: select_sensor_val },
           url: "" + ip + "/api/put_wire_or_wireless",
           success: function () {
-            console.log(select_sensor_val);
+            // console.log(select_sensor_val);
             console.log("選擇感測方式成功");
           },
         });
       });
 
-      // 完成
+      // 多項式完成
       $("#check_model_1").on("click", function () {
         var stateData = { state: 0 };
         $.ajax({
@@ -278,7 +277,7 @@ export default {
         });
       });
 
-      // 下一步
+      // 類神經下一步
       $("#check_model_2").on("click", function () {
         var stateData = { state: 1 };
         $.ajax({
@@ -299,13 +298,21 @@ export default {
           data: { q: chose },
           url: "" + ip + "/api/update_choose_model",
           success: function () {
-            location.reload();
+            console.log("以確認選擇模型")
           },
         });
       });
     });
 
-    return { choose_model, choose_mode, choose_sensor, myModal_1, myModal_2 };
+
+
+    return {
+      choose_model,
+      choose_mode,
+      choose_sensor,
+      myModal_1,
+      myModal_2,
+    };
   },
 };
 </script>

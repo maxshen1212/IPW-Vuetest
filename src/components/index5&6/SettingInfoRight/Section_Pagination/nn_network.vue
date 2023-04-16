@@ -124,6 +124,7 @@ export default {
         url: "" + ip + "/api/upload_path",
         complete: function () {
           console.log("上傳成功");
+          $("#check_model").prop("disabled", false);
         },
       });
     }
@@ -138,6 +139,11 @@ export default {
           let now_path = data[0].module_name;
           const [check] = now_path.split("/").reverse();
           now_module_name.innerText = "目前使用模型：" + check;
+          if (check === "") {
+            $("#check_model").prop("disabled", true);
+          } else {
+            $("#check_model").prop("disabled", false);
+          }
         },
       });
     }
